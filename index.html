@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMW33B7zR9eyh5a8M75rF0z9x1CRN9wVhK4z8X" crossorigin="anonymous">
+
+    <title>Rabin Garai | Home</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="hero-left">
+                <h2 class="sliced-text">Hi, I'm <span>Rabin Garai</span></h2>
+                <p class="hero-description">
+                    <span id="age"></span> years old, I'm 
+                    <span class="rotating-text" style="color: rgb(255, 0, 0); font-weight: 600;">
+                        <span>Student</span>
+                        <span>NCC Certified</span>
+                        <span>DIT Certified</span>
+                        <span>Innovator</span>
+                    </span>.
+
+                </p>
+<script>
+             
+const birthDate = new Date(2005, 6, 15); // Replace with your birth date (Year, Month - 1, Day)
+const today = new Date();
+let age = today.getFullYear() - birthDate.getFullYear();
+
+// Check if the current date is before the birth date this year
+const isBeforeBirthday = 
+    today.getMonth() < birthDate.getMonth() || 
+    (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate());
+
+if (isBeforeBirthday) {
+    age--; // Reduce age if the birthday hasn't occurred yet this year
+}
+
+document.getElementById("age").textContent = age;
+</script> 
+
+               
+                
+                <a href="#about" class="button">Learn More</a>
+            </div>
+            <div class="hero-right">
+                <img src="imgs/1st.jfif" alt="Hero Graphic">
+            </div>
+        </section>
+        
+        
+
+        <section class="about-me" id="about">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>
+                    My name is Rabin Garai, I completed my 10th grade at Muninagar Radhakanta Vidyapith and continued my education at Bishnupur  Krittibas Mukherjee High School for my 12th grade. Throughout my academic journey, I have participated in the NCC program and earned certificates from a one-year computer course, enhancing my skills in technology.
+                </p>
+            
+                <p>
+                    I have a passion for exploring new places and have visited several scenic locations, including Susunia Hill, Biharinath Hill, Joyrambati, Mukutmanipur, Victoria Memorial, Eden Gardens, Rasmancha, and Chhoto Angaria. Each of these destinations has enriched my experiences and shaped my appreciation for nature and culture.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="imgs/home.jfif" alt="Rabin Garai" />
+            </div>
+        </section>
+        
+
+        <section class="education">
+            <h2>Education</h2>
+            <div class="education-container">
+                <div class="education-item">
+                    <img src="imgs/10th.jpg" alt="Muninagar Radhakanta Vidyapith" class="school-image">
+                    <div class="education-info">
+                        <h3>10th Grade</h3>
+                        <p><strong>School:</strong> Muninagar Radhakanta Vidyapith</p>
+                        <p><strong>Year:</strong> 2023</p>
+                      
+                        <p><strong>Special Programs:</strong> The school offered various extracurricular activities, including sports, cultural events, and community service initiatives.</p>
+                        <p><strong>Notable Features:</strong> A well-equipped library and experienced faculty contributed to a strong academic environment.</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <img src="imgs/12th.avif" alt="Town School" class="school-image">
+                    <div class="education-info">
+                        <h3>12th Grade</h3>
+                        <p><strong>School:</strong>Bishnupur Krittibas Mukherjee High School</p>
+                        <p><strong>Year:</strong> 2025</p>
+                       
+                        <p><strong>Special Programs:</strong> The school emphasized STEM education and provided various workshops and seminars for students.</p>
+                        <p><strong>Notable Features:</strong> Modern classrooms, a science laboratory, and a strong focus on holistic education fostered a conducive learning atmosphere.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="activities">
+            <h2>Activities</h2>
+            <div class="activities-container">
+                <div class="activity-item">
+                    <img src="imgs/ncc.jfif" alt="NCC Participation" class="activity-image">
+                    <div class="activity-info">
+                        <h3>NCC Participation</h3>
+                        <p><strong>Organization:</strong> National Cadet Corps (NCC)</p>
+                       
+                        <p>Participated in various drills and training sessions that enhanced leadership and discipline. Attended camps and gained valuable skills in teamwork and physical fitness.</p>
+                        <p>Received a certificate for active participation and showcased the ability to work under pressure and follow directives efficiently.</p>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <img src="imgs/computer.jpg" alt="Computer Course" class="activity-image">
+                    <div class="activity-info">
+                        <h3>DIT Certified</h3>
+                        <p><strong>Institution:</strong> National Youth Computer Center</p>
+                        <p><strong>Duration:</strong> 1 Year</p>
+                        <p><strong>Subjects Covered:</strong> Computer Fundamentals, MS-Office, HTML, C Language, C++, Internet Concepts, Practical Applications</p>
+                        <p><strong>Grade Achieved:</strong> 90% (AA)</p>
+                        <p>Completed a one-year comprehensive computer course covering essential software applications, programming fundamentals, and web development. Demonstrated proficiency in tools such as Microsoft Office, Java programming, and basic web technologies (HTML, CSS, JavaScript).</p>
+                        <p>Received certificates for course completion and successfully developed projects showcasing the acquired skills.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="places-visited">
+            <h2>Places I've Visited</h2>
+            <div class="places-container">
+                <div class="place-item">
+                    <img src="imgs/Susunia.webp" alt="Susunia Hill" class="place-image">
+                    <div class="place-info">
+                        <h3>Susunia Hill</h3>
+                        <p>A scenic hill with a natural spring and trekking trails.</p>
+                    </div>
+                </div>
+                <div class="place-item">
+                    <img src="imgs/Biharinath Hill.webp" alt="Biharinath Hill" class="place-image">
+                    <div class="place-info">
+                        <h3>Biharinath Hill</h3>
+                        <p>A hill with a Shiva temple, forests, and water bodies.</p>
+                    </div>
+                </div>
+                <div class="place-item">
+                    <img src="imgs/Joyrambati.jpg" alt="Joyrambati" class="place-image">
+                    <div class="place-info">
+                        <h3>Joyrambati</h3>
+                        <p>A village that was the birthplace of Sree Sarada Devi.</p>
+                    </div>
+                </div>
+                <div class="place-item">
+                    <img src="imgs/Mukutmanipur.jpeg" alt="Mukutmanipur" class="place-image">
+                    <div class="place-info">
+                        <h3>Mukutmanipur</h3>
+                        <p>A scenic spot known for its dam and beautiful views.</p>
+                    </div>
+                </div>
+                <div class="place-item">
+                    <img src="imgs/Victoria Memorial.jpg" alt="Victoria Memorial" class="place-image">
+                    <div class="place-info">
+                        <h3>Victoria Memorial</h3>
+                        <p>An iconic monument showcasing Indo-Saracenic architecture.</p>
+                    </div>
+                </div>
+                <div class="place-item">
+                    <img src="imgs/Eden Gardens.jpg" alt="Eden Gardens" class="place-image">
+                    <div class="place-info">
+                        <h3>Eden Gardens</h3>
+                        <p>Famous cricket stadium known for its rich history.</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+        
+
+
+        <!-- contact -->
+        <section class="contact-form-section">
+            <div class="contact-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScB8iXkAadxWcUf7hNt1CRmV61zWndhMwQABg6Jw_vvwelHww/viewform?embedded=true" width="570" height="590" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                
+                <!-- Right: Image -->
+                <div class="contact-image">
+                    <img src="imgs/con.jfif" alt="Contact Us" />
+                </div>
+            </div>
+        </section>
+        
+        
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h4>About Me</h4>
+                <p>I'm Rabin Garai,My name is Rabin Garai, I completed my 10th grade at Muninagar Radhakanta Vidyapith and continued my education at Krittibas Mukherjee High School for my 12th grade. Throughout my academic journey, I have participated in the NCC program and earned certificates from a one-year computer course, enhancing my skills in technology. Follow my journey!</p>
+            </div>
+    
+            <div class="footer-social">
+                <h4>Connect with Me</h4>
+                <a href="https://youtube.com/@rabingarai9298?si=goTbkh5cg2mBh9PE" target="_blank" aria-label="GitHub">
+                    <img src="imgs/yt.webp" alt="GitHub" class="social-icon">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100074281727286" target="_blank" aria-label="Facebook">
+                    <img src="imgs/fb.png" alt="Facebook" class="social-icon">
+                </a>
+                
+                <a href="https://www.instagram.com/itz.rabingarai" target="_blank" aria-label="Instagram">
+                    <img src="imgs/insta.webp" alt="Instagram" class="social-icon">
+                </a>
+        
+            </div>
+    
+            <div class="footer-contact">
+                <h4>Contact Me</h4>
+                <p>Email: <a href="mailto:rabingarai11@gmail.com" style="color: blue;">rabingarai11@gmail.com</a></p>
+                
+            </div>
+        </div>
+    
+        <p>© 2025 Rabin Garai. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

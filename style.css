@@ -1,0 +1,794 @@
+/* Reset default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body and General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #000000;
+ 
+  background-color: #ffffff; /* Light background for contrast */
+}
+
+/* Header Styles */
+header {
+  background: #3e9448; /* Blue background */
+  color: #fff;
+  padding: 5px 0; /* Padding for header */
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px; /* Space below the header */
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+}
+
+nav ul li {
+  display: inline; /* Display list items inline */
+  margin: 0 15px; /* Space between items */
+}
+
+nav a {
+  color: #fff; /* White text for links */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold links */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+nav a:hover {
+  color: #ffd700; /* Gold color on hover */
+}
+
+
+
+
+
+
+/* General Hero Section Styling */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #00b4d8, #0077b6);
+  color: #fff;
+  padding: 50px;
+  min-height: 80vh;
+}
+
+.hero-left {
+  flex: 1;
+  padding: 20px;
+}
+
+.hero-right {
+  flex: 1;
+  text-align: center;
+}
+
+
+
+.hero-right img {
+  max-width: 40%; /* Set maximum width of the image */
+  border-radius: 90px; /* Rounded corners */
+  box-shadow: 0.1px 1px 5px 5px rgba(254, 2, 61, 0.977); 
+  /* filter: blur(2px) brightness(0.8); Base blur and brightness for glass effect */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for transform and filter */
+}
+
+/* Apply hover effects */
+.hero-right img:hover {
+  box-shadow: 0.1px 1px 5px 5px rgba(40, 2, 254, 0.977); 
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+  filter: brightness(1) contrast(1) saturate(1) hue-rotate(10deg); /* Multiple filters for vibrant effect */
+}
+
+
+/* Sliced Text Styling */
+.sliced-text {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #ff9f1c, #2ec4b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fade-in 2s ease-in-out;
+}
+
+/* Rotating Text */
+.hero-description {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.rotating-text {
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  height: 1.5em;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.rotating-text span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  animation: rotate-text-alt 8s linear infinite;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.rotating-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.rotating-text span:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.rotating-text span:nth-child(3) {
+  animation-delay: 4s;
+}
+
+.rotating-text span:nth-child(4) {
+  animation-delay: 6s;
+}
+
+/* Text Animation */
+@keyframes rotate-text-alt {
+  0%, 20% {
+      opacity: 1;
+      transform: translateY(0%);
+  }
+  25%, 100% {
+      opacity: 0;
+      transform: translateY(-100%);
+  }
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ff9f1c;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background: #ff6f1c;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .hero {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero-left, .hero-right {
+      flex: none;
+      width: 100%;
+  }
+
+  .hero-right img {
+      margin-top: 20px;
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fade-in {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+
+
+/* About Me Section Styles */
+.about-me {
+  display: flex; /* Use Flexbox for layout */
+  justify-content: space-between; /* Space between content and image */
+  align-items: center; /* Center items vertically */
+  padding: 40px 120px; /* Add padding on top/bottom and left/right for gaps */
+  background-color: #75f269; /* Light background color */
+  border-radius: 20px; /* Rounded corners for the section */
+  box-shadow: 0 2px 10px rgb(240, 2, 2); /* Shadow effect */
+  margin: 20px; /* Margin to separate from other sections */
+  transition: background-color 0.8s ease; /* Smooth transition for background color */
+  animation: fadeIn 1s ease; /* Animation for the section */
+}
+
+.about-me:hover {
+  background-color: #47ece9; /* Change background color on hover */
+}
+
+.about-content {
+  flex: 1; /* Allow content to take available space */
+  margin-right: 20px; /* Space between text and image */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.about-content:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.about-content h2 {
+  font-size: 2em; /* Heading font size */
+  margin-bottom: 10px; /* Space below heading */
+  color: #007bff; /* Heading color */
+}
+
+.about-content p {
+  margin-bottom: 20px; /* Space between paragraphs */
+  line-height: 1.6; /* Improve readability */
+  color: #555; /* Paragraph color */
+}
+
+.about-image {
+  flex: 0 0 30%; /* Fixed width for the image container (30% of the section width) */
+  transition: transform 0.3s ease; /* Smooth transition for image scaling */
+}
+
+.about-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.about-image img {
+  max-width: 76%; /* Responsive image */
+  border-radius: 180px; /* Rounded corners for the image */
+}
+
+/* Responsive Styles for About Me */
+@media (max-width: 600px) {
+  .about-me {
+      flex-direction: column; /* Stack items vertically on mobile */
+      text-align: center; /* Center text */
+      padding: 20px; /* Reduce padding on mobile */
+  }
+
+  .about-content {
+      margin-right: 0; /* Remove margin on mobile */
+      margin-bottom: 20px; /* Space below text */
+  }
+
+  .about-image {
+      width: 100%; /* Full width on mobile */
+      margin: 0; /* Remove margin */
+  }
+}
+
+
+/* Education Section Styles */
+.education {
+  padding: 60px 80px; /* Padding for the education section */
+  background-color: #fff; /* White background for contrast */
+  border-radius: 20px; /* Rounded corners */
+  margin: 2px; /* Margin to separate from other sections */
+  box-shadow: 0 2px 10px rgb(1, 237, 13); /* Shadow effect */
+}
+
+.education h2 {
+  text-align: center; /* Centered heading */
+  color: #007bff; /* Heading color */
+  margin-bottom: 2px; /* Space below heading */
+  font-size: 2em; /* Font size for the heading */
+}
+
+/* Education Container Styles */
+.education-container {
+  display: flex; /* Flexbox for layout */
+  justify-content: space-around; /* Space between items */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Individual Education Item Styles */
+.education-item {
+  flex: 1 1 45%; /* Flexible width for items */
+  margin: 6px; /* Margin for spacing */
+  padding: 40px; /* Padding inside items */
+  border: 2px solid #ff00ff; /* Blue border */
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+  position: relative; /* Position for pseudo-element */
+  overflow: hidden; /* Hide overflow for pseudo-element */
+}
+
+.education-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* School Image Styles */
+.school-image {
+  
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 300px; /* Rounded corners for the image */
+  border: 2px solid #ff3700; /* Blue border */
+}
+
+/* Education Info Styles */
+.education-info {
+  text-align: center; /* Centered text */
+  margin-top: 1px; /* Space above text */
+  background-color: rgba(0, 123, 255, 0.1); /* Light blue background */
+  padding: 1px; /* Padding around text */
+  border-radius: 1px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.education-item:hover .education-info {
+  background-color: rgba(0, 123, 255, 0.3); /* Darker background on hover */
+}
+
+/* Responsive Styles for Education Section */
+@media (max-width: 600px) {
+  .education-container {
+      flex-direction: column; /* Stack items vertically on mobile */
+      align-items: center; /* Center items */
+  }
+
+  .education-item {
+      flex: 1 1 80%; /* Adjust item width on mobile */
+  }
+}
+
+
+
+
+/* Activities Section Styles */
+.activities {
+  background-color: #f9f9f9; /* Light background for the activities section */
+  padding: 30px; /* Padding around the section */
+  text-align: center; /* Centered text for headings */
+}
+
+.activities-container {
+  display: flex; /* Flexbox for layout */
+  justify-content: space-around; /* Space between items */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  margin: 20px 20px; /* Margin above and below */
+}
+
+.activity-item {
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* To clip child elements */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+  flex: 0 1 calc(45% - 20px); /* Flex-grow to fill space with margin adjustment */
+  margin: 1px; /* Side margin */
+  position: relative; /* For positioning child elements */
+  padding: 1px; /* Padding inside the activity item */
+}
+
+.activity-item:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.activity-image {
+  width: 200px; /* Set a small fixed width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px; /* Margin around images */
+  border-radius: 5px; /* Rounded corners for images */
+  transition: transform 0.3s; /* Smooth transition for image scaling */
+}
+
+.activity-item:hover .activity-image {
+  transform: scale(1.1); /* Enlarge image slightly on hover */
+}
+
+.activity-info {
+  padding: 10px; /* Padding inside the info section */
+  text-align: left; /* Align text to the left */
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d); /* Colorful background */
+  border-radius: 5px; /* Rounded corners for the info section */
+  color: #fff; /* White text for contrast */
+  position: relative; /* For pseudo-element positioning */
+  overflow: hidden; /* To clip child elements */
+}
+
+.activity-info h3 {
+  margin-bottom: 5px; /* Space below the heading */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+.activity-info p {
+  margin: 5px 0; /* Margin for paragraph spacing */
+}
+
+/* Add animated background effect */
+.activity-item::before {
+  content: '';
+  position: absolute; /* Positioning for pseudo-element */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  right: 0; /* Align to right */
+  bottom: 0; /* Align to bottom */
+  background: rgba(255, 255, 255, 0.1); /* Light overlay */
+  opacity: 0; /* Start invisible */
+  transition: opacity 0.3s; /* Smooth transition */
+  z-index: 0; /* Behind other elements */
+}
+
+.activity-item:hover::before {
+  opacity: 1; /* Fade in on hover */
+  transition: opacity 0.3s; /* Smooth transition */
+}
+
+
+
+
+
+
+
+
+
+/* Places Visited Section Styles */
+.places-visited {
+  padding: 20px;
+  background-color: #f5f5f5; /* Light gray background */
+  text-align: center; /* Center the section title */
+}
+
+.places-visited h2 {
+  font-size: 2rem;
+  color: #000000; /* Dark color for the title */
+  margin-bottom: 30px;
+}
+
+.places-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between items */
+}
+
+.place-item {
+  background-color: #fff; /* White background for each place item */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Clip overflow for rounded corners */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+  width: 300px; /* Fixed width for place items */
+}
+
+.place-item:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.place-image {
+  width: 100%; /* Full width of the item */
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Cover the space without distortion */
+  transition: filter 0.3s ease; /* Smooth filter transition */
+}
+
+.place-info {
+  padding: 15px; /* Padding inside the info section */
+}
+
+.place-info h3 {
+  font-size: 1.5rem; /* Size for the place name */
+  color: #2c3e50; /* Dark blue color */
+  margin: 0 0 10px; /* Margin below the heading */
+}
+
+.place-info p {
+  font-size: 1rem; /* Size for the description */
+  color: #555; /* Medium gray color */
+}
+
+/* Add a hover effect to the image */
+.place-item:hover .place-image {
+  filter: brightness(0.8); /* Darken the image on hover */
+}
+
+
+
+
+
+/* contact */
+
+/* Contact Form Section with Two Columns */
+.contact-form-section {
+  background: linear-gradient(60deg, #d79cf1, #e0e0e0);
+  background: linear-gradient(60deg, #e1ea83, #ea80ce);
+  background: linear-gradient(60deg, #8885e6, #ea80ce);
+  padding: 40px 2px;
+  margin: 1px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: background 0.5s ease;
+}
+
+.contact-form-section:hover {
+  background: linear-gradient(60deg, #f88d8d, #ea80ce);
+  background: linear-gradient(60deg, #f3ae89, #ea80ce);
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 30%;
+  padding-right: 20px;
+  text-align: left;
+}
+
+.contact-form h2 {
+  font-size: 2em;
+  margin-bottom: 2px;
+  color: #000000;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in;
+}
+
+.contact-form .form-group {
+  margin-bottom: 2px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  background: #fff;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  outline: none;
+}
+
+.contact-form .form-actions {
+  margin-top: 20px;
+}
+
+.contact-form button {
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  animation: pulse 0.5s infinite alternate;
+}
+
+.contact-image {
+  flex: 1;
+  min-width: 45%;
+  text-align: center;
+}
+
+.contact-image img {
+  max-width: 65%;
+  border-radius: 90px;
+  box-shadow: 0 4px 8px rgb(0, 230, 58);
+  transition: transform 0.1s, filter 0.9s;
+}
+
+.contact-image img:hover {
+  transform: scale(1.05);
+  filter: brightness(90%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-image {
+    min-width: 100%;
+    padding: 0;
+  }
+
+  .contact-form {
+    margin-bottom: 20px;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+
+
+
+/* end contact */
+
+
+
+
+
+footer {
+  background-color: #282c34; /* Dark background color */
+  color: #ffffff; /* White text color */
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Prevent overflow for animations */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* Space between columns */
+  align-items: flex-start; /* Align items to the top */
+  gap: 40px; /* Space between sections */
+}
+
+.footer-about,
+.footer-social,
+.footer-contact {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  border-radius: 12px; /* Rounded corners */
+  padding: 30px;
+  flex: 1; /* Flex grow to equally distribute space */
+  max-width: 300px; /* Limit width of each section */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4); /* Deeper shadow for more depth */
+  transition: transform 0.3s ease, background 0.3s ease; /* Transition for hover effects */
+}
+
+.footer-about:hover,
+.footer-social:hover,
+.footer-contact:hover {
+  transform: translateY(-10px); /* Raise the section more on hover */
+  background: rgba(255, 255, 255, 0.15); /* Change background on hover */
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column; /* Stack social icons vertically */
+  align-items: center; /* Center-align icons */
+  gap: 10px; /* Space between icons */
+}
+
+.social-icon {
+  width: 40px; /* Set the width for uniformity */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Animation for hover effect */
+}
+
+.social-icon:hover {
+  transform: scale(1.1) rotate(10deg); /* Slightly enlarge and rotate the icon on hover */
+  filter: brightness(0.9); /* Darken the icon on hover */
+}
+
+.footer-contact a {
+  color: #ffffff; /* Light color for links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Transition for hover effect */
+}
+
+.footer-contact a:hover {
+  color: #4CAF50; /* Change color on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+p {
+  margin: 10px 0; /* Space between paragraphs */
+}
+
+footer p {
+  font-size: 0.85em; /* Smaller font size for copyright */
+  margin-top: 20px; /* Space above copyright */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column; /* Stack sections vertically on small screens */
+  }
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  header h1 {
+      font-size: 2em; /* Smaller font size on mobile */
+  }
+  .hero h2 {
+      font-size: 2em; /* Smaller hero heading */
+  }
+  .hero p {
+      font-size: 1em; /* Smaller paragraph font size */
+  }
+  .button {
+      padding: 8px 16px; /* Adjust padding for mobile */
+  }
+  .education-item {
+      width: 90%; /* Full width on mobile */
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0; /* Start invisible */
+      transform: translateY(-20px); /* Move up */
+  }
+  to {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Original position */
+  }
+}
